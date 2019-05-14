@@ -1,0 +1,18 @@
+name: OktaliaAPI
+author: Walexmine
+version: 1.0.3
+main: fr.WalexFelwin.OktaliaAPI.Bukkit.Main
+commands:
+  lag:
+  grades:
+  coins:
+  freeze:
+  vanish:
+  modo:
+  coin:
+  money:
+  permission:
+  systemmodo:
+  pay:
+  randomtp:
+  report:

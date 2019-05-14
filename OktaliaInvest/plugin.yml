@@ -1,0 +1,6 @@
+name: OktaliaInvest
+author: Walexmine
+version: 1.0
+main: fr.walexmine.OktaliaInvest.Main
+commands:
+  invest:

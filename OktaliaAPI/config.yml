@@ -1,0 +1,5 @@
+Motd:
+  normal: "       &7&l<&a&l====&7&l>&a&l Oktalia &7| &a&lNetWork &7&l<&a&l====&7&l>\n &e&oIn dev !"
+  full: "       &7&l<&a&l====&7&l>&a&l Oktalia &7| &a&lNetWork &7&l<&a&l====&7&l>\n &4&lServeur full &7| &eVIP  !"
+  maintenance: "       &7&l<&a&l====&7&l>&a&l Oktalia &7| &a&lNetWork &7&l<&a&l====&7&l>\n &4&lServeur dddddd &7| &eVIP  !"
+Slots: 200

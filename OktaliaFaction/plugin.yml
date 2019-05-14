@@ -1,0 +1,10 @@
+name: OktaliaFaction
+version: 1.0
+author: WalexFelwin
+main: fr.WalexFelwin.OktaliaFaction.Main
+commands:
+  menu:
+  preview:
+  giveitem:
+  magasin:
+   aliases: [shop]

@@ -1,0 +1,6 @@
+name: OktaliaRuche
+author: Walexmine
+version: 1.0
+main: fr.walexmine.OktaliaRuche.Main
+commands:
+  ruche:
