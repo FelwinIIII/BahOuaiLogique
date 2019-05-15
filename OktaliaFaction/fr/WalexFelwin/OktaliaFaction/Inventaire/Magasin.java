@@ -14,11 +14,6 @@ public class Magasin {
 		Inventory inv = Bukkit.createInventory(null, 54, "§8§lMagasin §7(§8Catégories§7)");
 		
 		
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("");
-		list.add("§c» §7Kit: §6/§epreview §e§lVIP");
-		list.add("");
-		
 		//------------------CONTOUR---------------------//
 		
 		API_Inventaire.additems(160, 1, 7, inv, "", null, 0);
