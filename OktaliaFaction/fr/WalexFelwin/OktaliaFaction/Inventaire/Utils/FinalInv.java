@@ -32,14 +32,44 @@ public class FinalInv implements Listener{
 	}
 
 	public static void FinalInv1(ItemStack item,Integer Prix,Player p,Inventory invname) {
-
-		name= invname.getName();
 		
 		Inventory inv = Bukkit.createInventory(null, 9, invname.getName()+" > Achat");
 		
 		item.getItemMeta().getLore().get(1);
 		API_Inventaire.additems(160, 10, 14, inv, "-10", null, 1);
 		API_Inventaire.additems(160, 1, 14, inv, "-1", null, 2);
+		
+		API_Inventaire.additems(160, 1, 4, inv, "+1", null, 6);
+		API_Inventaire.additems(160, 10, 4, inv, "+10", null, 7);
+
+		ArrayList<String> list = new ArrayList<String>();
+		
+    	list.add("");
+    	list.add(item.getItemMeta().getLore().get(1));
+    	list.add("");
+    	list.add("§bQuantité: §e"+item.getAmount());
+    	list.add("");
+    	list.add("§b§lClic droit pour acheté");
+
+		API_Inventaire.additems(item.getTypeId(), 1, 0, inv, "", list, 4);
+
+		
+		p.openInventory(inv);
+
+		getInv.put(p, inv);
+	}
+	
+	public static void FinalInvVente(ItemStack item,Integer Prix,Player p,Inventory invname) {
+
+		name= invname.getName();
+		
+		Inventory inv = Bukkit.createInventory(null, 9, invname.getName()+" > Vente");
+		
+		item.getItemMeta().getLore().get(1);
+		API_Inventaire.additems(160, 10, 14, inv, "-10", null, 1);
+		API_Inventaire.additems(160, 1, 14, inv, "-1", null, 2);
+		
+		API_Inventaire.additems(160, 64, 4, inv, "TOUT", null, 5);
 		
 		API_Inventaire.additems(160, 1, 4, inv, "+1", null, 6);
 		API_Inventaire.additems(160, 10, 4, inv, "+10", null, 7);
@@ -86,6 +116,7 @@ public class FinalInv implements Listener{
 	        {
 	        	return;
 	        } else {
+	        	
 	        	if(e.getClickedInventory().getName().equalsIgnoreCase(getInv.get(p).getName())) {
 	        	int newamount = Integer.valueOf(p.getOpenInventory().getTopInventory().getItem(4).getItemMeta().getLore().get(3).replace("§bQuantité: §e", ""));
 	        	
@@ -172,7 +203,7 @@ public class FinalInv implements Listener{
 	    }
 	        	
 	        	} 	
-	   
+	        
 
 }
 	    }
