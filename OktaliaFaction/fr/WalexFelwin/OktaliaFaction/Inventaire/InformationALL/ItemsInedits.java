@@ -1,6 +1,8 @@
 package fr.WalexFelwin.OktaliaFaction.Inventaire.InformationALL;
 
 import fr.WalexFelwin.OktaliaAPI.Bukkit.API.API_Inventaire;
+import fr.walexmine.oktaliaclasse.PRESTIGE;
+
 import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -34,7 +36,9 @@ public class ItemsInedits
     list4.add("§7(§fPatate,Carotte,Bl§§7)");
     list4.add("");
     
+    if(PRESTIGE.getLVL(p) > 5){
     API_Inventaire.additems(279, 1, 0, inv, "§7§lHache §2§lL§gendaire", list, 20);
+    }
     API_Inventaire.additems(397, 1, 0, inv, "§6§lRuche", list2, 22);
     API_Inventaire.additems(49, 1, 0, inv, "§5§lColonne d'obsidienne", list3, 24);
     API_Inventaire.additems(359, 1, 0, inv, "§9§lReplanteuse", list4, 31);
