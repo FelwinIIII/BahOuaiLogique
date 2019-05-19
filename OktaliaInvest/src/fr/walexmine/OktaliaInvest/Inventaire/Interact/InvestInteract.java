@@ -38,12 +38,10 @@ public class InvestInteract implements Listener{
 	   	    	 
 	   		    	 if(e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§a - §6§l30 Minutes §a-")){
 
-	   		    		 long end = 1000L*60*2;
-	   		    		 long start = 1000L*60*2 + System.currentTimeMillis();
+	   		    		 long end = 60*2;
 	   		    		 
 	   		    		 PlayerMove.Invest.put(p, "30m");
-	   		    		 PlayerMove.TimeEND.put(p, ""+end);
-	   		    		 PlayerMove.TimeStart.put(p, ""+start);
+	   		    		 PlayerMove.Timeleft.put(p, ""+end);
 
 	   					p.sendMessage("INVEST 30 M 2 MIN");
 	   		    		 }

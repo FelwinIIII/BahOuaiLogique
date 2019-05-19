@@ -14,7 +14,7 @@ public class API_Temps {
 	  public static String getRemainingTime(Player p)
 	  {
 		  
-
+/*
 			long timeco = Long.parseLong(PlayerMove.TimeStart.get(p));
 			long timenow = System.currentTimeMillis();
 
@@ -38,18 +38,18 @@ public class API_Temps {
 				
 				
 			}
+		  */
 		  
 	    String remainingTime = "";
-	      long a = newtimeBDD + System.currentTimeMillis();
-	      long difference =  Long.parseLong(PlayerMove.TimeEND.get(p)) - newtimeBDD;
+	    
+	      long difference =  Long.parseLong(PlayerMove.Timeleft.get(p));
+	      
 		//    p.sendMessage("NEWTI "+a+"");
 	      if(difference < 0 ) {
 	    	  
 
 	    	  PlayerMove.Invest.put(p, "NULL");
-	    	  PlayerMove.TimeEND.put(p, "0");
-	    	  PlayerMove.TimeStart.put(p, "0");
-	    	  PlayerMove.TimetoSave.remove(p);
+	    	  PlayerMove.Timeleft.put(p, "0");
 	    	  
 	    	  
 	    	  return "end";
@@ -60,9 +60,9 @@ public class API_Temps {
 	      int hours = 0;
 	      int days = 0;
 	      int weeks = 0;
-	      while (difference >= 1000L)
+	      while (difference >= 1)
 	      {
-	        difference -= 1000L;
+	        difference -= 1;
 	        seconds++;
 	      }
 	      while (seconds >= 60)

@@ -24,7 +24,7 @@ public class UpdateInvest extends BukkitRunnable
 
 			for (Player pi2 : PlayerMove.Investzone.keySet() ) {
 				
-				
+	
 				
 		Location loc = pi2.getLocation();
 	  
@@ -38,7 +38,7 @@ public class UpdateInvest extends BukkitRunnable
 			
 			if(!PlayerMove.Invest.get(pi2).equalsIgnoreCase("NULL")) {
 				
-				
+				/*
 				String rep = API_Temps.getRemainingTime(pi2);
 				
 				if(rep.equalsIgnoreCase("end")) {
@@ -50,6 +50,23 @@ public class UpdateInvest extends BukkitRunnable
 				API_Title.sendTitleTime(pi2, 0, 22, 0, "§f» §6Invest §7["+API_Invest.GetInvestT(pi2)+"§7] §f«", "§f "+rep+" §6!");
 
 				
+				}*/
+				
+				int time = Integer.valueOf(PlayerMove.Timeleft.get(pi2));
+				
+				if(time == 0){
+				
+				PlayerMove.Invest.put(pi2, "NULL");
+
+			    API_Title.sendTitle(pi2, "§f» §6Invest §7["+API_Invest.GetInvestT(pi2)+"§7]", " §aLe temps d'investisements est terminées ! ", -20);
+			    
+				
+				} else {
+					
+					int newtime = time - 1;
+							
+					PlayerMove.Timeleft.put(pi2, ""+newtime);		
+					
 				}
 			}
 			

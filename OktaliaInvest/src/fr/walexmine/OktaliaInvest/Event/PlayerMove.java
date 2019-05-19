@@ -30,6 +30,7 @@ public class PlayerMove implements Listener{
 	  public static HashMap<Player, String> Invest = new HashMap(); // TIME
 
 	  public static HashMap<Player, String> TimetoSave = new HashMap();
+	  public static HashMap<Player, String> Timeleft = new HashMap();
 	  
 	  
 	public PlayerMove(Main main) {
@@ -64,19 +65,22 @@ public class PlayerMove implements Listener{
 
 				} else {
 
-					TimeEND.put(p, ""+API_Invest.getTemps(p));
+					/*TimeEND.put(p, ""+API_Invest.getTemps(p));
 					
 					long getstart = API_Invest.getTempsRestant(p);
 					
 					long time = System.currentTimeMillis()+getstart;
 					
-					TimeStart.put(p, ""+time);
+					TimeStart.put(p, ""+time);*/
+					
+
+					long time = API_Invest.getTemps(p);
 					
 					Invest.put(p, GInvest);
-					
+					Timeleft.put(p, ""+time);
 					Investzone.put(p, true);
 					
-					System.out.println("LOAD INVEST Player: "+ p.getName() +" Invest: "+GInvest+" TimeA: "+getstart+ " TimeE: "+TimeEND.get(p));
+					System.out.println("LOAD INVEST Player: "+ p.getName() +" Invest: "+GInvest+" TimeA: "+time);
 				
 				
 				}
@@ -118,7 +122,7 @@ public class PlayerMove implements Listener{
 				
 				
 				
-				
+				/*
 				long Timeadd =  System.currentTimeMillis() - Long.parseLong(TimeStart.get(p));
 				
 				if(TimetoSave.containsKey(p)) {
@@ -138,7 +142,7 @@ public class PlayerMove implements Listener{
 					
 					TimeStart.remove(p);
 				}
-				
+			*/	
 			}
 			
 		}
